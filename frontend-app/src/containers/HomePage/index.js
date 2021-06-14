@@ -5,7 +5,7 @@ import SubHeader from '../../components/SubHeader'
 
 const HomePage=(props)=> {
     return (
-        <div style={{width:'100px'}}>
+        <div style={{width:'100vw'}}>
             <Layout >
                 HomePage
             </Layout>

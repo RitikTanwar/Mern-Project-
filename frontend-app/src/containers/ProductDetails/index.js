@@ -9,7 +9,7 @@ import { AiFillThunderbolt } from "react-icons/ai";
 import { MaterialButton } from "../../components/MaterialUI";
 import "./style.css";
 import { generatePublicURL } from '../../urlConfig';
-import { addToCart } from '../../actions/cart';
+import { addItemsToCart } from '../../actions/cart';
 
 const ProductDetails = (props) => {
 
@@ -63,7 +63,7 @@ const ProductDetails = (props) => {
                             onClick={() => {
                               const { _id, name, price } = product.productDetails;
                               const img = product.productDetails.productImages[0].img;
-                              dispatch(addToCart({ _id, name, price, img }));
+                              dispatch(addItemsToCart({ _id, name, price, img }));
                               props.history.push(`/cart`);
                             }}
                             />

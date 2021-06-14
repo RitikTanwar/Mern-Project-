@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { generatePublicURL } from "../../../urlConfig";
 import "./style.css";
 
-
-
 const CartItem = (props) => {
   const [qty, setQty] = useState(props.cartItem.qty);
 
@@ -42,20 +40,14 @@ const CartItem = (props) => {
       >
         {/* quantity control */}
         <div className="quantityControl">
-          <button 
-          onClick={onQuantityDecrement}
-          >-</button>
+          <button onClick={onQuantityDecrement}>-</button>
           <input value={qty} readOnly />
-          <button 
-          onClick={onQuantityIncrement}
-              >+</button>
+          <button onClick={onQuantityIncrement}>+</button>
         </div>
         <button className="cartActionBtn">save for later</button>
         <button
           className="cartActionBtn"
-        //   onClick={
-        //       () => props.onRemoveCartItem(_id)
-        //     }
+          onClick={() => props.onRemoveCartItem(_id)}
         >
           Remove
         </button>
